@@ -1,118 +1,126 @@
 <!DOCTYPE html>
-<!-- Informa ao navegador que o documento utiliza HTML5 -->
 
 
 <html lang="pt-BR">
-<!-- Inicia o documento HTML e define o idioma como português do Brasil -->
 
 
 <head>
-    <!-- Contém configurações e informações da página -->
 
 
     <meta charset="UTF-8">
-    <!-- Define a codificação dos caracteres para permitir acentos e caracteres especiais -->
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Faz a página se adaptar ao tamanho da tela de diferentes dispositivos -->
 
 
     <title>Animal Planet</title>
-    <!-- Define o título que aparece na aba do navegador -->
 
 
     <link rel="stylesheet" href="style.css">
-    <!-- Conecta o arquivo HTML ao arquivo de estilos CSS -->
+
+
 </head>
 
 
 <body>
-    <!-- Contém todo o conteúdo que será exibido na página -->
 
 
-    <header class="header">
-       
-        <div class="header-inner">
-           
-            <a href="#" class="logo">
-               
+    <header>
+
+
+        <div class="logo">
+
+
+            <a href="#">
+
+
                 <img src=".//assents/ChatGPT_Image_10_de_set._de_2026__08_16_30-removebg-preview (1).png" alt="Logo do Animal Planet">
-                <!-- Exibe a imagem da logo -->
-                <!-- src indica o caminho da imagem -->
-                <!-- alt fornece uma descrição alternativa da imagem -->
 
 
             </a>
+
+
         </div>
 
 
-        <div>
-            <!-- Agrupa o nome do projeto -->
+        <div class="nome-projeto">
 
 
-            <h1 style="color:#0E376D;">
-                <!-- h1 representa o título principal da página -->
-                <!-- style permite aplicar CSS diretamente no elemento -->
-                <!-- color define a cor azul do texto -->
-
-
-                Animal
-
-
-                <span style="color:#16A34A;">
-                    <!-- span permite aplicar uma configuração específica somente a uma parte do texto -->
-                    <!-- Aqui a palavra Planet recebe a cor verde -->
-
-
-                    Planet
-                </span>
-            </h1>
         </div>
+
+
+        <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu">
+            ☰
+        </button>
 
 
         <nav>
-            <!-- Representa a área de navegação do site -->
 
 
-            <ul>
-                <!-- Cria uma lista não ordenada para o menu -->
+            <ul class="nav" id="nav">
 
 
                 <li><a href="#">Início</a></li>
-                <!-- li representa um item da lista -->
-                <!-- a cria o link e href define o destino -->
 
 
                 <li><a href="#">Recursos</a></li>
-                <!-- Item do menu Recursos -->
+
+
                 <li><a href="#">Sobre</a></li>
+
+
                 <li><a href="#">Benefícios</a></li>
+
+
                 <li><a href="#">Planos</a></li>
+
+
                 <li><a href="#">Contato</a></li>
 
 
             </ul>
+
+
+            <div class="acoes">
+
+
+                <a href="#">Entrar</a>
+
+
+                <a href="#">Cadastrar</a>
+
+
+            </div>
+
+
         </nav>
-
-
-        <div class="acoes">
-            <!-- Agrupa os links de ação do usuário -->
-
-
-            <a href="#">Entrar</a>
-            <!-- Link para entrar no sistema -->
-
-
-            <a href="#">Cadastrar</a>
-            <!-- Link para realizar um cadastro -->
-
-
-        </div>
 
 
     </header>
 
 
+    <script>
+
+
+        const menuHamburguer = document.getElementById("menu-hamburguer");
+
+
+        const nav = document.querySelector("nav");
+
+
+        menuHamburguer.addEventListener("click", function () {
+
+
+            nav.classList.toggle("active");
+
+
+        });
+
+
+    </script>
+
+
 </body>
+
+
 </html>

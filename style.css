@@ -1,31 +1,26 @@
-/* Cabeçalho do meu projeto veterinario: logo, menu (nav) e botões (actions) */
-
 :root {
     --azul-escuro: #0E376D;
     --azul: #2563EB;
     --verde: #16A34A;
     --verde-escuro: #15803D;
-    --texto-principal: #374151;
+    --texto-principal: #7093ca;
     --texto-secundario: #6B7280;
-    --cor-borda: #22e081;
-    --cor-fundo: #e9e9e9;
+    --cor-borda: #c2f311;
+    --cor-fundo: #FFFFFF;
 }
-
-
+ 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
-
+ 
 body {
     font-family: "Poppins", sans-serif;
     color: var(--texto-principal);
     background-color: var(--cor-fundo);
 }
-
-
+ 
 header {
     position: sticky;
     top: 0;
@@ -35,91 +30,64 @@ header {
     padding: 15px 24px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 60px;
+    justify-content: space-between;
+    gap: 24px;
 }
-
-
-
-
-
-
-
-
+ 
 .header-inner {
-    max-width: 1200px; /* É o máximo da largura */
-    margin: -50 auto; /* margem 0 em cima/baixo e
-    "auto nas laterais */
-    padding: 0 24px; /* espaço interno: 0 em cima/baixo e 24px nas laterais */
-
-
-    /* Aplicação do Flexbox */
-    display: flex; /* Transforma essa div em um
-    "container flexisivél". Isso é o que permite
-    colocar logo, menu e botões um do lado do outro */
-
-
-    align-items: center; /* Alinha os intes no
-    CENTRO verticalmente dentro do header */
-
-
-    justify-content: space-between; /* Distribui os itens: o primeiro cola na esquerda, o último
-    cola na direita, e sobre espaço entre eles */
-
-
-    gap: 24px /* Espaço mínimo entre os itens (logo, menu e botões) */
-
-
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+ 
+    display: flex;
+ 
+    align-items: center;
+ 
+    justify-content: space-between;
+ 
+    gap: 24px;
 }
-
-
-.logo {
+ 
+.logo {  
     align-items: center;
     display: block;
 }
-
-
+ 
 .logo img {
-    width: 500px;
+    width: 250px;
 }
-
-
+ 
 .nome-projeto h1 {
     font-size: 24px;
     color: var(--azul-escuro);
 }
-
-
+ 
 nav ul {
     display: flex;
     align-items: center;
     gap: 20px;
     list-style: none;
 }
-
-
+ 
 .nav a {
     color: var(--texto-principal);
     text-decoration: none;
     font-size: 14px;
-    white-space: nowrap;
-    transition: color .2s ease;
+    white-space: nowrap;  
+    transition: color .2s ease;  
 }
-
-
+ 
 nav a:hover {
     color: var(--verde);
 }
-
-
+ 
 .acoes {
     display: flex;
     align-items: center;
     gap: 12px;
     cursor: pointer;
 }
-
-
+ 
 .acoes a {
     text-decoration: none;
     font-size: 14px;
@@ -127,16 +95,86 @@ nav a:hover {
     padding: 9px 16px;
     border-radius: 6px;
 }
-
-
+ 
 .acoes a:first-child {
     color: var(--azul-escuro);
     border: 1px solid var(--azul-escuro);
 }
-
-
+ 
 .acoes a:last-child {
     color: var(--cor-fundo);
     background-color: var(--verde);
     border: 1px solid var(--verde);
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: var(--azul-escuro);
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-fundo);
+        border-bottom: 1px solid var(--cor-borda);
+    }
+
+
+    nav.active {
+        display: block;
+    }
+
+
+    nav.active ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 15px 24px;
+    }
+
+
+    nav.active ul li {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav.active .acoes {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 10px 24px 20px;
+    }
+
+
+    nav.active .acoes a {
+        width: 100%;
+        text-align: center;
+    }
+
+
 }
