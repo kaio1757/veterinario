@@ -1,126 +1,189 @@
+```html
 <!DOCTYPE html>
-
-
 <html lang="pt-BR">
 
-
 <head>
-
-
     <meta charset="UTF-8">
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
     <title>Animal Planet</title>
 
-
     <link rel="stylesheet" href="style.css">
 
+    <!-- Fonte do projeto -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Ícones do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
 </head>
 
-
 <body>
 
+    <!-- HEADER -->
+    <header class="header">
 
-    <header>
+        <div class="header-inner">
 
-
-        <div class="logo">
-
-
-            <a href="#">
-
-
-                <img src=".//assents/ChatGPT_Image_10_de_set._de_2026__08_16_30-removebg-preview (1).png" alt="Logo do Animal Planet">
-
-
-            </a>
-
-
-        </div>
-
-
-        <div class="nome-projeto">
-
-
-        </div>
-
-
-        <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu">
-            ☰
-        </button>
-
-
-        <nav>
-
-
-            <ul class="nav" id="nav">
-
-
-                <li><a href="#">Início</a></li>
-
-
-                <li><a href="#">Recursos</a></li>
-
-
-                <li><a href="#">Sobre</a></li>
-
-
-                <li><a href="#">Benefícios</a></li>
-
-
-                <li><a href="#">Planos</a></li>
-
-
-                <li><a href="#">Contato</a></li>
-
-
-            </ul>
-
-
-            <div class="acoes">
-
-
-                <a href="#">Entrar</a>
-
-
-                <a href="#">Cadastrar</a>
-
-
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="#">
+                    <img src=".//assents/ChatGPT_Image_10_de_set._de_2026__08_16_30-removebg-preview (1).png"
+                        alt="Logo do Animal Planet">
+                </a>
             </div>
 
+            <!-- NOME DO PROJETO -->
+            <div class="nome-projeto">
+                <h2 style="color: #030d61;">
+                    Animal <span style="color: #d1820a;">Planet</span>
+                </h2>
+            </div>
 
-        </nav>
+            <!-- MENU -->
+            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu">
+                ☰
+            </button>
 
+            <nav>
+
+                <ul class="nav" id="nav">
+
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+
+                </ul>
+
+                <!-- BOTÕES -->
+                <div class="acoes">
+
+                    <a href="#" class="btn-entrar">Entrar</a>
+
+                    <a href="#" class="btn-cadastrar">Cadastrar</a>
+
+                </div>
+
+            </nav>
+
+        </div>
 
     </header>
 
 
-    <script>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
 
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-inner">
+
+                <!-- TEXTOS -->
+                <div class="hero-texto">
+
+                    <span class="hero-etiqueta">
+                        Cuidado e carinho para seu melhor amigo
+                    </span>
+
+                    <h1 class="hero-titulo">
+                        Cuidando da saúde do seu pet com
+                        <span>amor e dedicação</span>
+                    </h1>
+
+                    <p class="hero-descricao">
+                        Oferecemos cuidados veterinários de qualidade,
+                        acompanhamento e atenção especial para garantir
+                        o bem-estar e a saúde do seu melhor amigo.
+                    </p>
+
+                    <!-- BOTÕES -->
+                    <div class="hero-botoes">
+
+                        <a href="#contato" class="btn btn-primario btn-grande">
+                            Agendar consulta
+                        </a>
+
+                        <a href="#servicos" class="btn btn-contorno btn-grande">
+                            <span class="material-symbols-outlined">
+                                pets
+                            </span>
+                            Conhecer serviços
+                        </a>
+
+                    </div>
+
+                    <!-- VANTAGENS -->
+                    <ul class="hero-vantagens">
+
+                        <li>
+                            <span class="material-symbols-outlined">
+                                verified_user
+                            </span>
+
+                            <p>
+                                <strong>Segurança</strong>
+                                Cuidado responsável
+                            </p>
+                        </li>
+
+                        <li>
+                            <span class="material-symbols-outlined">
+                                favorite
+                            </span>
+
+                            <p>
+                                Amor pelos animais
+                            </p>
+                        </li>
+
+                        <li>
+                            <span class="material-symbols-outlined">
+                                medical_services
+                            </span>
+
+                            <p>
+                                Atendimento veterinário
+                            </p>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- IMAGEM -->
+                <img
+                    src="./assents/download.jpg"
+                    alt="Atendimento veterinário para animais"
+                    class="hero-imagem"
+                >
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JAVASCRIPT DO MENU -->
+    <script>
 
         const menuHamburguer = document.getElementById("menu-hamburguer");
 
-
         const nav = document.querySelector("nav");
-
 
         menuHamburguer.addEventListener("click", function () {
 
-
             nav.classList.toggle("active");
-
 
         });
 
-
     </script>
-
 
 </body>
 
-
 </html>
+```

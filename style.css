@@ -1,112 +1,84 @@
+css
+/* CORES DO PROJETO */
 :root {
     --azul-escuro: #0E376D;
-    --azul: #2563EB;
-    --verde: #16A34A;
-    --verde-escuro: #15803D;
-    --texto-principal: #7093ca;
+    --azul: #0f46bd;
+    --verde: #2ddf1c;
+    --verde-escuro: #187e0b;
+    --texto-principal: #374151;
     --texto-secundario: #6B7280;
-    --cor-borda: #c2f311;
+    --cor-borda: #E5E7EB;
     --cor-fundo: #FFFFFF;
+    --fundo-claro: #F0F7FF;
 }
- 
+
+/* CONFIGURAÇÕES GERAIS */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
- 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     color: var(--texto-principal);
     background-color: var(--cor-fundo);
 }
- 
+
+
+/* =========================
+   HEADER
+========================= */
+
 header {
     position: sticky;
     top: 0;
     z-index: 100;
     background-color: var(--cor-fundo);
     border-bottom: 1px solid var(--cor-borda);
-    padding: 15px 24px;
+    padding: 12px 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-}
- 
-.header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px;
- 
-    display: flex;
- 
-    align-items: center;
- 
-    justify-content: space-between;
- 
-    gap: 24px;
-}
- 
-.logo {  
-    align-items: center;
-    display: block;
-}
- 
-.logo img {
-    width: 250px;
-}
- 
-.nome-projeto h1 {
-    font-size: 24px;
-    color: var(--azul-escuro);
-}
- 
-nav ul {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-}
- 
-.nav a {
-    color: var(--texto-principal);
-    text-decoration: none;
-    font-size: 14px;
-    white-space: nowrap;  
-    transition: color .2s ease;  
-}
- 
-nav a:hover {
-    color: var(--verde);
-}
- 
-.acoes {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-}
- 
-.acoes a {
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 9px 16px;
-    border-radius: 6px;
-}
- 
-.acoes a:first-child {
-    color: var(--azul-escuro);
-    border: 1px solid var(--azul-escuro);
-}
- 
-.acoes a:last-child {
-    color: var(--cor-fundo);
-    background-color: var(--verde);
-    border: 1px solid var(--verde);
+    justify-content: center;
 }
 
+.header-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* NOME DO PROJETO */
+
+.nome-projeto h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--azul-escuro);
+    white-space: nowrap;
+}
+
+/* MENU */
 
 nav {
     display: flex;
@@ -114,6 +86,64 @@ nav {
     gap: 24px;
 }
 
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color .2s ease;
+}
+
+.nav a:hover {
+    color: var(--verde);
+}
+
+/* BOTÕES DO CABEÇALHO */
+
+.acoes {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.acoes a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: .2s ease;
+}
+
+.acoes a:first-child {
+    color: var(--azul-escuro);
+    border: 1px solid var(--azul-escuro);
+}
+
+.acoes a:first-child:hover {
+    background-color: var(--azul-escuro);
+    color: rgb(235, 96, 3);
+}
+
+.acoes a:last-child {
+    color: white;
+    background-color: var(--verde);
+    border: 1px solid var(--verde);
+}
+
+.acoes a:last-child:hover {
+    background-color: var(--verde-escuro);
+}
+
+/* MENU HAMBÚRGUER */
 
 .menu-hamburguer {
     display: none;
@@ -125,56 +155,371 @@ nav {
 }
 
 
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 100%;
+    min-height: 600px;
+    background: linear-gradient(
+        120deg,
+        #F0F7FF,
+        #FFFFFF
+    );
+    display: flex;
+    align-items: center;
+    padding: 60px 24px;
+}
+
+.hero-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+/* TEXTOS */
+
+.hero-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-etiqueta {
+    color: var(--verde-escuro);
+    background-color: #DCFCE7;
+    padding: 9px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.hero-titulo {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--azul-escuro);
+    margin-bottom: 20px;
+}
+
+.hero-titulo span {
+    color: var(--verde);
+}
+
+.hero-descricao {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 28px;
+}
+
+/* BOTÕES DA SEÇÃO PRINCIPAL */
+
+.hero-botoes {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: .2s ease;
+}
+
+.btn-grande {
+    padding: 14px 22px;
+    font-size: 14px;
+}
+
+.btn-primario {
+    background-color: var(--verde);
+    color: rgb(223, 86, 8);
+    border: 1px solid var(--verde);
+}
+
+.btn-primario:hover {
+    background-color: var(--verde-escuro);
+}
+
+.btn-contorno {
+    color: var(--azul-escuro);
+    border: 1px solid var(--azul-escuro);
+    background-color: transparent;
+}
+
+.btn-contorno:hover {
+    background-color: var(--azul-escuro);
+    color: rgb(235, 78, 6);
+}
+
+
+/* =========================
+   VANTAGENS
+========================= */
+
+.hero-vantagens {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.hero-vantagens li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.hero-vantagens .material-symbols-outlined {
+    color: var(--verde);
+    font-size: 27px;
+}
+
+.hero-vantagens p {
+    font-size: 12px;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+.hero-vantagens strong {
+    display: block;
+    color: var(--azul-escuro);
+    font-size: 13px;
+}
+
+
+/* =========================
+   IMAGEM PRINCIPAL
+========================= */
+
+.hero-imagem {
+    width: 100%;
+    max-width: 550px;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(14, 55, 109, 0.12);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .header-inner {
+        gap: 12px;
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    .nav a {
+        font-size: 12px;
+    }
+
+    .acoes {
+        gap: 6px;
+    }
+
+    .acoes a {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .hero-inner {
+        gap: 30px;
+    }
+
+    .hero-vantagens {
+        gap: 15px;
+    }
+}
+
+
+/* =========================
+   TABLETS E CELULARES
+========================= */
 
 @media (max-width: 768px) {
 
+    header {
+        padding: 12px 20px;
+        position: sticky;
+    }
+
+    .header-inner {
+        position: relative;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+
+    .nome-projeto h2 {
+        font-size: 19px;
+    }
+
+    /* MOSTRAR MENU HAMBÚRGUER */
 
     .menu-hamburguer {
         display: block;
     }
 
+    /* ESCONDER MENU NORMAL */
 
     nav {
         display: none;
         position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+        top: calc(100% + 12px);
+        left: -20px;
+        width: calc(100% + 40px);
         background-color: var(--cor-fundo);
         border-bottom: 1px solid var(--cor-borda);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        padding: 15px 20px 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
     }
-
 
     nav.active {
-        display: block;
+        display: flex;
     }
 
-
-    nav.active ul {
+    nav ul {
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-        padding: 15px 24px;
-    }
-
-
-    nav.active ul li {
         width: 100%;
-        padding: 10px 0;
     }
 
-    nav.active .acoes {
+    nav ul li {
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--cor-borda);
+    }
+
+    .nav a {
+        font-size: 15px;
+    }
+
+    .acoes {
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
-        padding: 10px 24px 20px;
+        width: 100%;
     }
 
-
-    nav.active .acoes a {
+    .acoes a {
         width: 100%;
         text-align: center;
     }
 
+    /* HERO */
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-texto {
+        align-items: flex-start;
+    }
+
+    .hero-titulo {
+        font-size: 36px;
+    }
+
+    .hero-descricao {
+        font-size: 15px;
+    }
+
+    .hero-imagem {
+        max-width: 100%;
+        height: 320px;
+    }
+
+    .hero-vantagens {
+        gap: 18px;
+    }
+
+}
+
+
+/* =========================
+   CELULARES PEQUENOS
+========================= */
+
+@media (max-width: 480px) {
+
+    .logo img {
+        width: 105px;
+    }
+
+    .nome-projeto h2 {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 35px 18px;
+    }
+
+    .hero-titulo {
+        font-size: 30px;
+    }
+
+    .hero-etiqueta {
+        font-size: 11px;
+    }
+
+    .hero-botoes {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-botoes .btn {
+        width: 100%;
+    }
+
+    .hero-vantagens {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-imagem {
+        height: 250px;
+    }
 
 }
