@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | Animal Planet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-autenticacao">
+
+    <main class="auth-container">
+
+        <a href="index.html" class="auth-voltar">
+            ← Voltar para o início
+        </a>
+
+        <section class="auth-card">
+
+            <a href="index.html" class="auth-logo">
+                <img src="assents/logo.png" alt="Animal Planet">
+            </a>
+
+            <div class="auth-titulo">
+                <h1>Bem-vindo de volta!</h1>
+                <p>Acesse sua conta e continue cuidando do que importa.</p>
+            </div>
+
+            <form class="auth-form">
+
+                <div class="campo-auth">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="campo-auth">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+                </div>
+
+                <div class="auth-opcoes">
+                    <label class="lembrar">
+                        <input type="checkbox" name="lembrar">
+                        Lembrar de mim
+                    </label>
+
+                    <a href="#" class="auth-link">
+                        Esqueci minha senha
+                    </a>
+                </div>
+
+                <button type="submit" class="auth-botao">
+                    Entrar na plataforma
+                </button>
+
+            </form>
+
+            <div class="auth-divisor">
+                <span>ou</span>
+            </div>
+
+            <p class="auth-final">
+                Ainda não tem uma conta?
+                <a href="cadastro.html">Cadastre-se</a>
+            </p>
+
+        </section>
+
+        <p class="auth-rodape">
+            © 2026 Animal Planet. Todos os direitos reservados.
+        </p>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar | Animal Planet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-autenticacao">
+
+    <main class="auth-container">
+
+        <a href="index.html" class="auth-voltar">
+            ← Voltar para o início
+        </a>
+
+        <section class="auth-card auth-card-cadastro">
+
+            <a href="index.html" class="auth-logo">
+                <img src="assents/logo.png" alt="Animal Planet">
+            </a>
+
+            <div class="auth-titulo">
+                <h1>Crie sua conta!</h1>
+                <p>Faça parte do Animal Planet e organize melhor sua clínica.</p>
+            </div>
+
+            <form class="auth-form">
+
+                <div class="campo-auth">
+                    <label for="nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        required
+                    >
+                </div>
+
+                <div class="campo-auth">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="campo-auth">
+                    <label for="tipo">Tipo de usuário</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="veterinario">Veterinário(a)</option>
+                        <option value="recepcionista">Recepcionista</option>
+                        <option value="administrador">Administrador(a)</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="campo-auth">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Crie uma senha"
+                        required
+                    >
+                </div>
+
+                <div class="campo-auth">
+                    <label for="confirmar-senha">Confirmar senha</label>
+                    <input
+                        type="password"
+                        id="confirmar-senha"
+                        name="confirmar-senha"
+                        placeholder="Digite a senha novamente"
+                        required
+                    >
+                </div>
+
+                <label class="termos-auth">
+                    <input type="checkbox" name="termos" required>
+                    <span>
+                        Li e aceito os
+                        <a href="#">termos de uso</a>
+                        e a política de privacidade.
+                    </span>
+                </label>
+
+                <button type="submit" class="auth-botao">
+                    Criar minha conta
+                </button>
+
+            </form>
+
+            <div class="auth-divisor">
+                <span>ou</span>
+            </div>
+
+            <p class="auth-final">
+                Já possui uma conta?
+                <a href="login.html">Faça login</a>
+            </p>
+
+        </section>
+
+        <p class="auth-rodape">
+            © 2026 Animal Planet. Todos os direitos reservados.
+        </p>
+
+    </main>
+
+</body>
+</html>

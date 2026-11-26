@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,147 +6,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Animal Planet</title>
+    <title>Animal Planet | Gestão Veterinária</title>
 
     <link rel="stylesheet" href="style.css">
 
     <!-- Fonte do projeto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Ícones do Google -->
+    <!-- Ícones -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header class="header">
-
         <div class="header-inner">
 
             <!-- LOGO -->
             <div class="logo">
-                <a href="#">
-                    <img src=".//assents/ChatGPT_Image_10_de_set._de_2026__08_16_30-removebg-preview (1).png"
-                        alt="Logo do Animal Planet">
+                <a href="#inicio">
+                    <img src="assents/logo.png" alt="Logo Animal Planet">
                 </a>
             </div>
 
-            <!-- NOME DO PROJETO -->
-            <div class="nome-projeto">
-                <h2 style="color: #030d61;">
-                    Animal <span style="color: #d1820a;">Planet</span>
-                </h2>
-            </div>
-
             <!-- MENU -->
-            <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu">
+            <button class="menu-hamburguer" id="btn-menu"
+                aria-label="Abrir menu" aria-expanded="false">
                 ☰
             </button>
 
-            <nav>
-
-                <ul class="nav" id="nav">
-
+            <nav class="nav" id="nav">
+                <ul>
                     <li><a href="#inicio">Início</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#funcionalidades">Funcionalidades</a></li>
+                    <li><a href="#como-funciona">Como funciona</a></li>
                     <li><a href="#beneficios">Benefícios</a></li>
-                    <li><a href="#planos">Planos</a></li>
                     <li><a href="#contato">Contato</a></li>
-
                 </ul>
 
-                <!-- BOTÕES -->
                 <div class="acoes">
-
-                    <a href="#" class="btn-entrar">Entrar</a>
-
-                    <a href="#" class="btn-cadastrar">Cadastrar</a>
-
+                    <a href="login.html" class="btn-entrar">Entrar</a>
+                    <a href="cadastro.html" class="btn-cadastrar">Cadastrar</a>
                 </div>
-
             </nav>
 
         </div>
-
     </header>
 
-
-    <!-- CONTEÚDO PRINCIPAL -->
     <main>
 
         <!-- HERO -->
         <section class="hero" id="inicio">
-
             <div class="hero-inner">
 
-                <!-- TEXTOS -->
                 <div class="hero-texto">
 
                     <span class="hero-etiqueta">
-                        Cuidado e carinho para seu melhor amigo
+                        Gestão inteligente para clínicas veterinárias
                     </span>
 
                     <h1 class="hero-titulo">
-                        Cuidando da saúde do seu pet com
-                        <span>amor e dedicação</span>
+                        Mais organização para sua clínica.
+                        <span>Mais cuidado para os animais.</span>
                     </h1>
 
                     <p class="hero-descricao">
-                        Oferecemos cuidados veterinários de qualidade,
-                        acompanhamento e atenção especial para garantir
-                        o bem-estar e a saúde do seu melhor amigo.
+                        Organize consultas, acompanhe seus pacientes e
+                        controle informações importantes da sua clínica
+                        em um só lugar. Tenha mais praticidade na rotina
+                        e mais tempo para cuidar dos animais.
                     </p>
 
-                    <!-- BOTÕES -->
                     <div class="hero-botoes">
-
-                        <a href="#contato" class="btn btn-primario btn-grande">
-                            Agendar consulta
+                        <a href="cadastro.html" class="btn btn-primario btn-grande">
+                            Começar agora
                         </a>
 
-                        <a href="#servicos" class="btn btn-contorno btn-grande">
-                            <span class="material-symbols-outlined">
-                                pets
-                            </span>
-                            Conhecer serviços
+                        <a href="#funcionalidades" class="btn btn-contorno btn-grande">
+                            <span class="material-symbols-outlined">pets</span>
+                            Conhecer recursos
                         </a>
-
                     </div>
 
-                    <!-- VANTAGENS -->
                     <ul class="hero-vantagens">
 
                         <li>
                             <span class="material-symbols-outlined">
-                                verified_user
+                                calendar_month
                             </span>
-
                             <p>
-                                <strong>Segurança</strong>
-                                Cuidado responsável
+                                <strong>Agenda organizada</strong>
+                                Consultas em ordem
                             </p>
                         </li>
 
                         <li>
                             <span class="material-symbols-outlined">
-                                favorite
+                                pets
                             </span>
-
                             <p>
-                                Amor pelos animais
+                                <strong>Histórico dos pets</strong>
+                                Informações centralizadas
                             </p>
                         </li>
 
                         <li>
                             <span class="material-symbols-outlined">
-                                medical_services
+                                inventory_2
                             </span>
-
                             <p>
-                                Atendimento veterinário
+                                <strong>Controle de estoque</strong>
+                                Mais praticidade
                             </p>
                         </li>
 
@@ -154,36 +128,348 @@
 
                 </div>
 
-                <!-- IMAGEM -->
-                <img
-                    src="./assents/download.jpg"
-                    alt="Atendimento veterinário para animais"
-                    class="hero-imagem"
-                >
+                <!-- IMAGEM DO DASHBOARD -->
+                <div class="hero-imagem">
+                    <img src="assents/dashboard.png"
+                        alt="Painel de gestão do Animal Planet">
+                </div>
 
             </div>
+        </section>
 
+        <!-- SOBRE -->
+        <section class="secao" id="sobre">
+            <div class="container">
+
+                <span class="etiqueta">CONHEÇA O PROJETO</span>
+                <h2 class="secao-titulo">Sobre o Animal Planet</h2>
+
+                <div class="sobre-conteudo">
+                    <div class="sobre-texto">
+                        <p>
+                            O <strong>Animal Planet</strong> é um sistema
+                            de gestão desenvolvido especialmente para
+                            clínicas veterinárias. Sua proposta é
+                            simplificar tarefas administrativas e reunir
+                            informações importantes em um único ambiente.
+                        </p>
+
+                        <p>
+                            Com ferramentas para organizar consultas,
+                            acompanhar pacientes e controlar o estoque,
+                            a plataforma busca facilitar o dia a dia dos
+                            profissionais e contribuir para um atendimento
+                            mais organizado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="sobre-destaques">
+
+                    <article class="destaque-sobre">
+                        <div class="beneficio-circulo">
+                            <span class="material-symbols-outlined">flag</span>
+                        </div>
+                        <div>
+                            <h3>Objetivo</h3>
+                            <p>
+                                Facilitar a administração e a organização
+                                das clínicas veterinárias.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="destaque-sobre">
+                        <div class="beneficio-circulo">
+                            <span class="material-symbols-outlined">groups</span>
+                        </div>
+                        <div>
+                            <h3>Público-alvo</h3>
+                            <p>
+                                Veterinários, recepcionistas e equipes
+                                de clínicas veterinárias.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FUNCIONALIDADES -->
+        <section class="secao secao-clara" id="funcionalidades">
+            <div class="container">
+
+                <span class="etiqueta">RECURSOS DA PLATAFORMA</span>
+                <h2 class="secao-titulo">Funcionalidades</h2>
+
+                <p class="secao-descricao">
+                    Conheça alguns recursos que ajudam a tornar
+                    a gestão veterinária mais simples e organizada.
+                </p>
+
+                <div class="cards">
+
+                    <article class="cartao-funcionalidade">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        <h3>Agenda de consultas</h3>
+                        <p>
+                            Organize os horários, acompanhe os agendamentos
+                            e tenha uma visão mais clara dos atendimentos.
+                        </p>
+                    </article>
+
+                    <article class="cartao-funcionalidade">
+                        <span class="material-symbols-outlined">pets</span>
+                        <h3>Prontuário dos pacientes</h3>
+                        <p>
+                            Reúna informações dos animais, como histórico,
+                            consultas, vacinas e tratamentos.
+                        </p>
+                    </article>
+
+                    <article class="cartao-funcionalidade">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                        <h3>Controle de estoque</h3>
+                        <p>
+                            Acompanhe os produtos, medicamentos e materiais
+                            utilizados na clínica.
+                        </p>
+                    </article>
+
+                    <article class="cartao-funcionalidade">
+                        <span class="material-symbols-outlined">person</span>
+                        <h3>Cadastro de clientes</h3>
+                        <p>
+                            Organize os dados dos tutores e associe cada
+                            cliente aos seus respectivos animais.
+                        </p>
+                    </article>
+
+                    <article class="cartao-funcionalidade">
+                        <span class="material-symbols-outlined">monitoring</span>
+                        <h3>Visão geral</h3>
+                        <p>
+                            Consulte informações importantes da clínica
+                            por meio de um painel centralizado.
+                        </p>
+                    </article>
+
+                    <article class="cartao-funcionalidade">
+                        <span class="material-symbols-outlined">description</span>
+                        <h3>Registros organizados</h3>
+                        <p>
+                            Mantenha os dados dos atendimentos reunidos
+                            para facilitar as consultas futuras.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+        <section class="secao" id="como-funciona">
+            <div class="container">
+
+                <span class="etiqueta">PASSO A PASSO</span>
+                <h2 class="secao-titulo">Como funciona?</h2>
+
+                <p class="secao-descricao">
+                    O Animal Planet reúne etapas importantes da rotina
+                    veterinária em um fluxo simples.
+                </p>
+
+                <div class="passos">
+
+                    <article class="passo">
+                        <span class="numero-passo">01</span>
+                        <span class="material-symbols-outlined">person_add</span>
+                        <h3>Cadastre os clientes e pets</h3>
+                        <p>
+                            Registre os dados dos tutores e as informações
+                            dos animais atendidos pela clínica.
+                        </p>
+                    </article>
+
+                    <article class="passo">
+                        <span class="numero-passo">02</span>
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        <h3>Organize os atendimentos</h3>
+                        <p>
+                            Registre consultas e acompanhe os compromissos
+                            da rotina veterinária.
+                        </p>
+                    </article>
+
+                    <article class="passo">
+                        <span class="numero-passo">03</span>
+                        <span class="material-symbols-outlined">inventory_2</span>
+                        <h3>Gerencie as informações</h3>
+                        <p>
+                            Consulte prontuários e acompanhe os materiais
+                            e produtos da clínica.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BENEFÍCIOS -->
+        <section class="secao secao-clara" id="beneficios">
+            <div class="container">
+
+                <span class="etiqueta">VANTAGENS</span>
+                <h2 class="secao-titulo">Benefícios do Animal Planet</h2>
+
+                <div class="beneficios">
+
+                    <article class="beneficio-card">
+                        <div class="beneficio-circulo">
+                            <span class="material-symbols-outlined">check_circle</span>
+                        </div>
+                        <h3>Organização</h3>
+                        <p>
+                            Reúna informações e tarefas importantes
+                            em um único sistema.
+                        </p>
+                    </article>
+
+                    <article class="beneficio-card">
+                        <div class="beneficio-circulo">
+                            <span class="material-symbols-outlined">schedule</span>
+                        </div>
+                        <h3>Agilidade</h3>
+                        <p>
+                            Facilite o acesso aos dados e a organização
+                            dos atendimentos.
+                        </p>
+                    </article>
+
+                    <article class="beneficio-card">
+                        <div class="beneficio-circulo">
+                            <span class="material-symbols-outlined">cloud</span>
+                        </div>
+                        <h3>Centralização</h3>
+                        <p>
+                            Consulte informações dos pacientes e da clínica
+                            em um só ambiente.
+                        </p>
+                    </article>
+
+                    <article class="beneficio-card">
+                        <div class="beneficio-circulo">
+                            <span class="material-symbols-outlined">favorite</span>
+                        </div>
+                        <h3>Mais atenção aos pets</h3>
+                        <p>
+                            Uma rotina organizada ajuda a equipe a dedicar
+                            mais atenção aos animais.
+                        </p>
+                    </article>
+
+                </div>
+
+                <!-- CHAMADA FINAL -->
+                <div class="cta">
+                    <div class="cta-icone">
+                        <span class="material-symbols-outlined">pets</span>
+                    </div>
+
+                    <div class="cta-texto">
+                        <h2>Uma gestão melhor começa com organização.</h2>
+                        <p>
+                            Conheça o Animal Planet e descubra como
+                            facilitar a rotina da sua clínica veterinária.
+                        </p>
+                    </div>
+
+                    <a href="cadastro.html" class="btn btn-primario btn-grande">
+                        Criar minha conta
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="secao" id="contato">
+            <div class="container">
+
+                <span class="etiqueta">FALE CONOSCO</span>
+                <h2 class="secao-titulo">Entre em contato</h2>
+
+                <p class="secao-descricao">
+                    Tem alguma dúvida ou sugestão? Envie uma mensagem.
+                </p>
+
+                <form action="#" method="post" class="form-contato">
+
+                    <div class="form-grupo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome"
+                            placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem"
+                            rows="5" placeholder="Escreva sua mensagem..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primario btn-grande">
+                        Enviar mensagem
+                    </button>
+
+                </form>
+            </div>
         </section>
 
     </main>
 
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="rodape-conteudo">
 
-    <!-- JAVASCRIPT DO MENU -->
-    <script>
+            <div class="rodape-marca">
+                <img src="assets/unnamed.png" alt="Logo Animal Planet">
+                <p>
+                    Tecnologia e organização para uma rotina veterinária
+                    mais prática e eficiente.
+                </p>
+            </div>
 
-        const menuHamburguer = document.getElementById("menu-hamburguer");
+            <div class="rodape-links">
+                <h3>Navegação</h3>
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#beneficios">Benefícios</a>
+            </div>
 
-        const nav = document.querySelector("nav");
+            <div class="rodape-links">
+                <h3>Acesso</h3>
+                <a href="login.html">Entrar</a>
+                <a href="cadastro.html">Cadastrar</a>
+                <a href="#contato">Contato</a>
+            </div>
 
-        menuHamburguer.addEventListener("click", function () {
+        </div>
 
-            nav.classList.toggle("active");
+        <div class="rodape-final">
+            <p>© 2026 Animal Planet. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-        });
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
-
 </html>
-```
